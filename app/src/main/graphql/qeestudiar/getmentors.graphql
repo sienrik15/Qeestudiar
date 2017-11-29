@@ -1,0 +1,17 @@
+ query mentorsQuery{
+       mentors{
+        id
+        name
+        career
+        specialization
+        social_media
+        link_project
+        photo_path
+        about
+    	experiences{
+                id
+        	    title
+        	    achievement}
+        question_about_decision
+       }
+}
