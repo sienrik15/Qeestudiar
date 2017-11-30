@@ -16,73 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="172dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/fondo"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_mentor" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="180dp"
-            android:layout_marginTop="8dp"
-            android:text="Egresado"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingenieria"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView3" />
-
         <android.support.constraint.Guideline
-            android:id="@+id/guideline2"
+            android:id="@+id/guideline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -96,28 +31,95 @@
             app:layout_constraintGuide_percent="0.7" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtEspecialid"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:text="Samuel Enrique Muñoz"
-            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            android:layout_marginStart="32dp"
+            android:text="Especialidad"
+            app:layout_constraintBottom_toTopOf="@+id/txtNivel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp" />
 
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/txtCarrer"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.83" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:text="Carrera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtNivel"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="32dp" />
+
+        <TextView
+            android:id="@+id/txtNivel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:text="Egresado"
+            app:layout_constraintBottom_toTopOf="@+id/txtCarrer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtEspecialid"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp" />
 
 
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:text="Samuel Enrique Muñoz"
+            app:layout_constraintBottom_toTopOf="@+id/txtEspecialid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="32dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:background="@drawable/fondo"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgPerdil"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="TODO"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mentor" />
 
 
     </android.support.constraint.ConstraintLayout>
