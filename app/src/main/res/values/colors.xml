@@ -2,5 +2,14 @@
 <resources>
     <color name="colorPrimary">#43A047</color>
     <color name="colorPrimaryDark">#2E7D32</color>
+    <color name="colorPrimaryLight">#4CAF50</color>
     <color name="colorAccent">#FFC107</color>
+
+
+    <color name="bacgroud_Darck">#1B5E20</color>
+    <color name="bacgroud_Primary">#66BB6A</color>
+    <color name="bacgroud_Light">#A5D6A7</color>
+
+    <color name="colortext_White">#FFFFFF</color>
+    <color name="color_In">#2196F3</color>
 </resources>
