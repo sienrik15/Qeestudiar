@@ -1,5 +1,6 @@
 package com.example.user.qeestudiar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnItemClickListMentor {
 
 
  /*   private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mProfileAdapter = new ProfileAdapter();
         mRecyclerView.setAdapter(mProfileAdapter);
+        mProfileAdapter.setOnItemClickListener(this);
 
         mQServicesGraphql = new ServicesGraphql();
         mQServicesGraphql.QueryMentors(new QueryCallBack() {
@@ -87,4 +89,9 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);*/
     }
 
+    @Override
+    public void onItemClick(Mentor element) {
+        Intent mIntent = new Intent(this,DetailPerfilActivity.class);
+        startActivity(mIntent);
+    }
 }

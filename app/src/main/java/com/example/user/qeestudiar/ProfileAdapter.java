@@ -21,8 +21,13 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
 
     Context mContext;
     List<Mentor> mListMentor;
+    OnItemClickListMentor clickListener;
     public ProfileAdapter(){
         mListMentor = new ArrayList<>();
+    }
+
+    public void setOnItemClickListener(OnItemClickListMentor clickListener) {
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -38,6 +43,9 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
         holder.txtName.setText(mHolderMentor.getName());
         holder.txtCarrer.setText(mHolderMentor.getCareer());
         holder.txtSpecialization.setText(mHolderMentor.getSpecialization());
+        if (this.clickListener != null) {
+            holder.setOnItemClickListener(mListMentor.get(position), this.clickListener);
+        }
     }
 
     @Override
@@ -71,6 +79,10 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
             txtSpecialization = itemView.findViewById(R.id.txtEspecialid);
         }
 
+        public void setOnItemClickListener(final Mentor element,final OnItemClickListMentor listener){
 
+            itemView.setOnClickListener(view -> listener.onItemClick(element));
+
+        }
     }
 }
