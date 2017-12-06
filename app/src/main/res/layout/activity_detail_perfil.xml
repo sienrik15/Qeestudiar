@@ -191,6 +191,25 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+<!--
+  <android.support.v7.widget.AppCompatButton
+      android:id="@+id/button2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="144dp"
+      android:text="Button"
+      android:textColor="@color/colortext_White"
+      app:backgroundTint="@color/colorPrimary"
+      app:backgroundTintMode="src_over"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.058"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+ -->
   <!--    <GridView
         android:id="@+id/simpleGridView"
         android:layout_width="match_parent"
