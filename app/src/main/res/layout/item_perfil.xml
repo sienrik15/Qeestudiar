@@ -21,59 +21,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.3" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.7" />
+            app:layout_constraintGuide_percent="0.32" />
 
         <TextView
             android:id="@+id/txtEspecialid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:text="Especialidad"
             app:layout_constraintBottom_toTopOf="@+id/txtNivel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/txtName"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="8dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
         <TextView
             android:id="@+id/txtCarrer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:text="Carrera"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/txtNivel"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="32dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNivel" />
 
         <TextView
             android:id="@+id/txtNivel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:text="Egresado"
             app:layout_constraintBottom_toTopOf="@+id/txtCarrer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/txtEspecialid"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="8dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEspecialid" />
 
 
         <TextView
@@ -81,22 +68,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:text="Samuel Enrique Muñoz"
             app:layout_constraintBottom_toTopOf="@+id/txtEspecialid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/relativeLayout"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="32dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:background="@drawable/fondo"
+            android:background="@color/bacgroud_perfil"
             android:visibility="visible"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,12 +94,12 @@
             android:id="@+id/imgPerdil"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:contentDescription="TODO"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="parent"

@@ -22,7 +22,7 @@ public class Mentor {
 
     private String linkProject;
 
-    private Object photoPath;
+    private String photoPath;
 
     private Object about;
 
@@ -78,11 +78,11 @@ public class Mentor {
         this.linkProject = linkProject;
     }
 
-    public Object getPhotoPath() {
+    public String getPhotoPath() {
         return photoPath;
     }
 
-    public void setPhotoPath(Object photoPath) {
+    public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
     }
 

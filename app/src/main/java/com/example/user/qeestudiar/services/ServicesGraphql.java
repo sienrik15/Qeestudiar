@@ -43,21 +43,22 @@ public class ServicesGraphql {
 
         okGraphql.query("{" +
                          " mentors {" +
-                         "     id" +
-                         "     name" +
-                         "     career" +
-                         "     specialization" +
-                         "     social_media" +
-                         "     link_project" +
-                         "     photo_path" +
-                         "     about"+
-                         "     experiences {" +
+                         "      edges {" +
                          "          id" +
-                         "          title" +
-                         "          achievement"+
-                         "     }" +
-                         "     question_about_decision" +
-                         " }"+
+                         "          name" +
+                         "          specialization" +
+                         "          social_media" +
+                         "          link_project" +
+                         "          photo_path" +
+                         "          about"+
+                         "          experiences {" +
+                         "              id" +
+                         "              title" +
+                         "              achievement"+
+                         "              }" +
+                         "          question_about_decision" +
+                         "          }"+
+                         "      }"+
                          "}").enqueue(modelMentors -> {
                             //play with your responseString
                                     try {
@@ -65,13 +66,15 @@ public class ServicesGraphql {
                                         mJsonMentors = data.getJSONObject("data");
                                         List<Mentor> mMentors = new ArrayList<>();
                                         Mentor mMentor;
-                                        mArrayMentos = mJsonMentors.getJSONArray("mentors");
+                                        mJsonMentors = mJsonMentors.getJSONObject("mentors");
+                                        mArrayMentos = mJsonMentors.getJSONArray("edges");
                                         for (int i=0; i < mArrayMentos.length(); i++) {
                                             mMentor = new Mentor();
                                             mMentor.setId(mArrayMentos.getJSONObject(i).getString("id"));
                                             mMentor.setName(mArrayMentos.getJSONObject(i).getString("name"));
                                             mMentor.setSpecialization(mArrayMentos.getJSONObject(i).getString("specialization"));
-                                            mMentor.setCareer(mArrayMentos.getJSONObject(i).getString("career"));
+                                            mMentor.setPhotoPath(mArrayMentos.getJSONObject(i).getString("photo_path"));
+                                            //mMentor.setCareer(mArrayMentos.getJSONObject(i).getString("career"));
                                             mMentors.add(mMentor);
                                         }
                                         mQueryCallBack.onSuccess(mMentors);

@@ -8,24 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.user.qeestudiar.models.Data;
+import com.example.user.qeestudiar.adapters.ProfileAdapter;
 import com.example.user.qeestudiar.models.Mentor;
-import com.example.user.qeestudiar.models.ModelMentors;
 import com.example.user.qeestudiar.services.QueryCallBack;
 import com.example.user.qeestudiar.services.ServicesGraphql;
-import com.github.florent37.okgraphql.OkGraphql;
-import com.github.florent37.okgraphql.converter.GsonConverter;
-import com.google.gson.Gson;
 import com.wang.avi.AVLoadingIndicatorView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.OkHttpClient;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListMentor {
 
